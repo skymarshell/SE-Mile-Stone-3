@@ -11,7 +11,7 @@ try
 {
     // เชื่อมต่อฐานข้อมูล
     $conn = new PDO("mysql:host=$host;dbname=$db", $user, $password);
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);   
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $conn->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
     //echo "Connected successfully";
 }
@@ -21,7 +21,6 @@ catch (PDOException $e)
     echo "Error: " . " " . $e->getMessage();
 }
 ?>
-
 
 <?php
 // Insert
@@ -87,7 +86,6 @@ if (isset($_GET['delete']))
 
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -139,7 +137,6 @@ if (isset($_GET['delete']))
             </form>
         </div>
 
-
     <?php
         if (isset($_POST['btnEdit']))
         {
@@ -161,7 +158,6 @@ if (isset($_GET['delete']))
     }
     ?>
 
-
     <div class="error-log" role="alert">
         <?php
         if (isset($_SESSION["alert"]))
@@ -178,7 +174,6 @@ if (isset($_GET['delete']))
         }
         ?>
     </div>
-
 
 
     <table class="table table-striped table-hover">
@@ -212,7 +207,6 @@ if (isset($_GET['delete']))
         ?>
     </table>
 
-
     <div class="d-flex justify-content-center align-items-center">
         <form class="" method="POST">
             <h1>Insert admin</h1>
@@ -232,13 +226,11 @@ if (isset($_GET['delete']))
         </form>
     </div>
 
-
     <script>
         function closeForm() {
             window.location.href = 'index.php';
         }
     </script>
 </body>
-
 
 </html>
